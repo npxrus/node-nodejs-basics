@@ -1,5 +1,4 @@
 import { promises } from 'fs';
-import { join } from 'path';
 
 export const copy = async () => {
   const srcDirName = './files';
