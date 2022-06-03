@@ -20,4 +20,5 @@ export const rename = async () => {
     console.error(errorMessage);
   }
 };
+
 rename();
