@@ -2,7 +2,7 @@ import { promises } from 'fs';
 
 export const list = async () => {
   const dirName = './files';
-  const errorMessage = 'FS operation failed';
+  const dirError = new Error('FS operation failed');
 
   try {
     const files = await promises.readdir(dirName);
@@ -10,7 +10,7 @@ export const list = async () => {
       console.log(file);
     }
   } catch (e) {
-    console.error(errorMessage);
+    console.error(dirError.message);
   }
 };
 
